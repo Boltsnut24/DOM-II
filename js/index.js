@@ -2,10 +2,11 @@
 const mainHeader = document.querySelector('.main-navigation');
 mainHeader.addEventListener('mouseover', event => {
   event.target.style.background = 'lightblue';
+
 });
 
 mainHeader.addEventListener('mouseleave', event => {
-  event.target.style.background = 'lightgray';
+  event.target.style.background = 'lightgray';  event.stopImmediatePropagation();
 });
 
 const transition = document.querySelectorAll('.img-content');
@@ -40,7 +41,13 @@ subContent.addEventListener('mouseleave', event => {
   event.target.style.background = 'white';
 });
 
+const focusEx = document.querySelectorAll('.destination');
 
+for(let i = 0; i < focusEx.length; i ++){
+  focusEx[i].addEventListener('mousedown', event => {
+    event.target.style.border = '3px solid pink';
+  })
+}
 
 
 
