@@ -1,5 +1,9 @@
 .home {
 
+  @keyframes flip{
+    from {width: 100%;}
+    to {width: 0%;}
+  }
   .intro {
     padding: 90px 0 10px;
     border-bottom: 2px dashed @navigation-border;
@@ -35,6 +39,9 @@
     .img-content {
       width: 48%;
       padding-left: 1%;
+
+      animation: flip;
+      animation-duration: 3s;
 
       @media @mobile {
         width: 100%;
